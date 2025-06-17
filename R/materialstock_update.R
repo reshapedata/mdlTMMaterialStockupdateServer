@@ -43,7 +43,7 @@ materialstock_update_uploadServer <- function(input,output,session,dms_token) {
   shiny::observeEvent(input$btn_materialstock_update_update,{
     dms_token=dms_token
     filename = file_materialstock_update()
-    data <- readxl::read_excel(filename,col_types = c("text", "numeric", "numeric",
+    data <- readxl::read_excel(filename,col_types = c("text","text", "numeric", "numeric",
                                                       "numeric","text","text","text"))
 
     data = as.data.frame(data)
