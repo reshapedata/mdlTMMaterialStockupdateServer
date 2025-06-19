@@ -44,7 +44,7 @@ materialstock_update_uploadServer <- function(input,output,session,dms_token) {
     dms_token=dms_token
     filename = file_materialstock_update()
     data <- readxl::read_excel(filename,col_types = c("text","text", "numeric", "numeric",
-                                                      "numeric","text","text","text"))
+                                                      "numeric","text","text","text", "numeric"))
 
     data = as.data.frame(data)
     data = tsdo::na_standard(data)
